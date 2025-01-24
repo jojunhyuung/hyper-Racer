@@ -99,7 +99,9 @@ public class GameManager : MonoBehaviour
 
     private void StartGame()
     {
+        // _roadIndex 초기화
         _roadIndex = 0;
+        
         // 도로 생성
         SpawnRoad(Vector3.zero);
         
@@ -113,8 +115,6 @@ public class GameManager : MonoBehaviour
         
         // 게임 상태를 Play로 변경
         GameState = State.Play;
-        InitializeRoadPool();
-        
     }
 
     public void EndGame()
